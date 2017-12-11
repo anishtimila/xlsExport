@@ -17,7 +17,7 @@ public class excel2txt {
     	BufferedWriter output = null;
         
     	//Create an object of File class to open xlsx file
-	    File file = new File("C:\\Users\\soar-it\\Desktop\\PropertyInventory2017.xlsx");
+	    File file = new File("Inventory2017.xlsx");
 	    
 	    //Create an object of FileInputStream class to read excel file
 	    FileInputStream inputStream = new FileInputStream(file);
@@ -29,7 +29,7 @@ public class excel2txt {
         							//System.out.println("start i="+i);
                                     //Read sheet inside the workbook by its name
                                     Sheet sheet = workbook.getSheetAt(i);
-                                    File txt = new File("C:\\Users\\soar-it\\Desktop\\test\\"+workbook.getSheetName(i)+".txt");
+                                    File txt = new File("test\\"+workbook.getSheetName(i)+".txt");
 			                        output = new BufferedWriter(new FileWriter(txt));
                                        
                                     //Find number of rows in excel file
